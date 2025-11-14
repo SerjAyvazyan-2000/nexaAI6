@@ -663,20 +663,8 @@ header {
   justify-content: center;
 }
 
-.hero-marquee-track div {
-  gap: 21px;
-  display: flex;
-  justify-content: center;
-}
-.hero-marquee-track div:nth-child(2) {
-  display: none;
-}
-.hero-marquee-track div:nth-child(3) {
-  display: none;
-}
-.hero-marquee-track div:nth-child(4) {
-  display: none;
-}
+
+
 .hero-marquee-track i {
   background: #999999;
   font-size: 24px;
@@ -688,6 +676,30 @@ header {
   text-align: center;
   color: #999999;
 }
+
+
+ 
+  .hero-marquee-track {
+    animation: marqueeScroll 30s linear infinite;
+    width: max-content;
+  }
+
+  .hero-marquee-track > div {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+    white-space: nowrap;
+  }
+
+  @keyframes marqueeScroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
 
 .advantages-secion {
   margin-top: 144px;
@@ -1450,31 +1462,7 @@ footer {
   opacity: 0.6;
 }
 
-@media (max-width: 1440px) {
-  .hero-marquee-track div:nth-child(2) {
-    display: flex;
-  }
-  .hero-marquee-track {
-    animation: marqueeScroll 20s linear infinite;
-    width: max-content;
-  }
 
-  .hero-marquee-track > div {
-    display: flex;
-    align-items: center;
-    gap: 21px;
-    white-space: nowrap;
-  }
-
-  @keyframes marqueeScroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  }
-}
 
 @media (max-width: 1400px) {
 }

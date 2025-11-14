@@ -163,7 +163,6 @@ document.querySelectorAll('.menu-list-link').forEach(link => {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  if (window.innerWidth < 1664) {
     const container = document.querySelector(".hero-clues");
     const marquee = document.querySelector(".marquee");
 
@@ -192,5 +191,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     animate();
-  }
+  
 });
